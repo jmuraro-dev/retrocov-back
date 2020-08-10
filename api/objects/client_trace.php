@@ -219,7 +219,6 @@ WHERE r.id = c.restaurantId AND c.restaurantId = ?";
         // set the number of days for the data conservation
         $conservationTime = 15; // in days
         $endDate = date("Y-m-d", strtotime("-".$conservationTime." days"));
-        echo $endDate;
         // bind the date of records to delete
         $stmt->bindParam(':date', $endDate);
 

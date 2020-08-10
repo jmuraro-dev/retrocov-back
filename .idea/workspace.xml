@@ -11,10 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="433a83ce-4532-48b0-abb4-210535036dd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/client_trace/auto_delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/objects/client_trace.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/objects/client_trace.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracage_bdd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tracage_bdd.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,7 @@
       <workItem from="1596810570398" duration="6780000" />
       <workItem from="1596818350585" duration="22000" />
       <workItem from="1596893050524" duration="10991000" />
-      <workItem from="1597066770715" duration="5125000" />
+      <workItem from="1597066770715" duration="7405000" />
     </task>
     <servers />
   </component>

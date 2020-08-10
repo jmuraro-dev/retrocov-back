@@ -19,10 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `tracage`
+-- Base de données :  `aw2g3_retrocov`
 --
-CREATE DATABASE IF NOT EXISTS `tracage` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `tracage`;
+CREATE DATABASE IF NOT EXISTS `aw2g3_retrocov` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `aw2g3_retrocov`;
 
 -- --------------------------------------------------------
 
