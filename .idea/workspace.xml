@@ -11,20 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="433a83ce-4532-48b0-abb4-210535036dd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/client_trace/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/client_trace/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/client_trace/read.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/client_trace/read_all.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/client_trace/read_by_restaurant_id.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/client_trace/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/objects/client_trace.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/client_trace/auto_delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/objects/restaurant.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/objects/restaurant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/restaurant/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/restaurant/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/restaurant/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/read.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/restaurant/read_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/read_all.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/restaurant/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/objects/client_trace.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/objects/client_trace.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +73,7 @@
       <workItem from="1596810570398" duration="6780000" />
       <workItem from="1596818350585" duration="22000" />
       <workItem from="1596893050524" duration="10991000" />
-      <workItem from="1597066770715" duration="2936000" />
+      <workItem from="1597066770715" duration="5125000" />
     </task>
     <servers />
   </component>

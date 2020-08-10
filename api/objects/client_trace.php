@@ -206,4 +206,29 @@ WHERE r.id = c.restaurantId AND c.restaurantId = ?";
         return false;
     }
 
+    // delete the client trace when the conservation time end
+    function deleteByDate()
+    {
+        // delete query
+        $query = "DELETE FROM " . $this->table_name . " WHERE date <= :date";
+
+        // prepare query
+        $stmt = $this->conn->prepare($query);
+
+
+        // set the number of days for the data conservation
+        $conservationTime = 15; // in days
+        $endDate = date("Y-m-d", strtotime("-".$conservationTime." days"));
+        echo $endDate;
+        // bind the date of records to delete
+        $stmt->bindParam(':date', $endDate);
+
+        // execute query
+        if ($stmt->execute()) {
+            return true;
+        }
+
+        return false;
+    }
+
 }
