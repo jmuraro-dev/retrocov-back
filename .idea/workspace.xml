@@ -11,39 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="433a83ce-4532-48b0-abb4-210535036dd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/config/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/objects/restaurant.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/restaurant/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/restaurant/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/restaurant/read.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/restaurant/read_all.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/restaurant/update.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/client_trace/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/client_trace/delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/client_trace/read.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/client_trace/read_all.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/client_trace/read_by_restaurant_id.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/client_trace/update.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/objects/client_trace.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/core.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/core.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/php-jwt-master/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/api/libs/php-jwt-master/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/php-jwt-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/api/libs/php-jwt-master/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/php-jwt-master/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/libs/php-jwt-master/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/php-jwt-master/src/BeforeValidException.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/libs/php-jwt-master/src/BeforeValidException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/php-jwt-master/src/ExpiredException.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/libs/php-jwt-master/src/ExpiredException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/php-jwt-master/src/JWT.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/libs/php-jwt-master/src/JWT.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/php-jwt-master/src/SignatureInvalidException.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/libs/php-jwt-master/src/SignatureInvalidException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objects/product.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objects/sale.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objects/user.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/delete_product.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/information.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/sale.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/view_products.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sale/find_sales.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sale/insert_sale.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/create_user.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/delete_user.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/login_user.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/update_user.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/validate_token.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/view_user.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/objects/restaurant.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/objects/restaurant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/restaurant/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/restaurant/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/restaurant/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/restaurant/read_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/read_all.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/restaurant/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,13 +55,17 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api/client_trace" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\haury\Desktop\Pro\tracage-back\api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\haury\Desktop\Pro\tracage-back\api\client_trace" />
+      <recent name="C:\Users\haury\Desktop\Pro\tracage-back\api\objects" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -97,11 +83,13 @@
       <workItem from="1596725375169" duration="992000" />
       <workItem from="1596810570398" duration="6780000" />
       <workItem from="1596818350585" duration="22000" />
+      <workItem from="1596893050524" duration="10991000" />
+      <workItem from="1597066770715" duration="2936000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -130,10 +118,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596814073275">
+    <state x="191" y="49" width="1089" height="631" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596970523288">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1596814073275" />
+    <state x="191" y="49" width="1089" height="631" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1596970523288" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1596814162939">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -142,5 +130,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1596818856009" />
+    <state x="297" y="-6" width="672" height="676" key="search.everywhere.popup" timestamp="1597068181210">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="-6" width="672" height="676" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1597068181210" />
   </component>
 </project>

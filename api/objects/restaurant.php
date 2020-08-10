@@ -34,7 +34,7 @@ class Restaurant
         return $stmt;
     }
 
-    // used when filling up the update product form
+    // used when filling up the update restaurant form
     function readById()
     {
 
@@ -45,7 +45,7 @@ class Restaurant
         // prepare query statement
         $stmt = $this->conn->prepare($query);
 
-        // bind id of product to be updated
+        // bind id of restaurant to be updated
         $stmt->bindParam(1, $this->id);
 
         // execute query
@@ -92,7 +92,7 @@ class Restaurant
 
     }
 
-    // update the product
+    // update the restaurant
     function update()
     {
 

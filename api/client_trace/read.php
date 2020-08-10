@@ -8,28 +8,32 @@ header('Content-Type: application/json');
 
 // include database and object files
 include_once '../config/database.php';
-include_once '../objects/restaurant.php';
+include_once '../objects/client_trace.php';
 
 // get database connection
 $database = new Database();
 $db = $database->getConnection();
 
 // prepare restaurant object
-$restaurant = new Restaurant($db);
+$clientTrace = new ClientTrace($db);
 
 // set ID property of record to read
-$restaurant->id = isset($_GET['id']) ? $_GET['id'] : die();
+$clientTrace->id = isset($_GET['id']) ? $_GET['id'] : die();
 
 // read the details of restaurant to be edited
-$restaurant->readById();
+$clientTrace->readById();
 
-if($restaurant->name!=null){
+if($clientTrace->date!=null){
     // create array
     $restaurant_arr = array(
-        "id" =>  $restaurant->id,
-        "name" => $restaurant->name,
-        "address" => $restaurant->address,
-        "password" => $restaurant->password
+        "id" =>  $clientTrace->id,
+        "date" => $clientTrace->date,
+        "tableNumber" => $clientTrace->tableNumber,
+        "firstname" => $clientTrace->firstname,
+        "lastname" => $clientTrace->lastname,
+        "phone" => $clientTrace->phone,
+        "postalCode" => $clientTrace->postalCode,
+        "restaurantId" => $clientTrace->restaurantId
     );
 
     // set response code - 200 OK
@@ -44,6 +48,6 @@ else{
     http_response_code(404);
 
     // tell the user restaurant does not exist
-    echo json_encode(array("message" => "Restaurant does not exist."));
+    echo json_encode(array("message" => "Client trace does not exist."));
 }
 ?>

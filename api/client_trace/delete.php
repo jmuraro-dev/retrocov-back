@@ -2,47 +2,41 @@
 // required headers
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
-header("Access-Control-Allow-Methods: PUT");
+header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-// include database and object files
+// include database and object file
 include_once '../config/database.php';
-include_once '../objects/restaurant.php';
+include_once '../objects/client_trace.php';
 
 // get database connection
 $database = new Database();
 $db = $database->getConnection();
 
 // prepare restaurant object
-$restaurant = new Restaurant($db);
+$clientTrace = new ClientTrace($db);
 
-// get id of restaurant to be edited
+// get restaurant id
 $data = json_decode(file_get_contents("php://input"));
 
-// set ID property of restaurant to be edited
-$restaurant->id = $data->id;
+// set restaurant id to be deleted
+$clientTrace->id = $data->id;
 
-// set restaurant property values
-$restaurant->name = $data->name;
-$restaurant->address = $data->address;
-$restaurant->password = $data->password;
-
-// update the restaurant
-if ($restaurant->update()) {
+// delete the restaurant
+if ($clientTrace->delete()) {
 
     // set response code - 200 ok
     http_response_code(200);
 
     // tell the user
-    echo json_encode(array("message" => "Restaurant was updated."));
-} // if unable to update the restaurant, tell the user
+    echo json_encode(array("message" => "Client trace was deleted."));
+} // if unable to delete the restaurant
 else {
 
     // set response code - 503 service unavailable
     http_response_code(503);
 
     // tell the user
-    echo json_encode(array("message" => "Unable to update restaurant."));
+    echo json_encode(array("message" => "Unable to delete the client trace."));
 }
-?>

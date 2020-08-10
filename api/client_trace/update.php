@@ -8,34 +8,38 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 // include database and object files
 include_once '../config/database.php';
-include_once '../objects/restaurant.php';
+include_once '../objects/client_trace.php';
 
 // get database connection
 $database = new Database();
 $db = $database->getConnection();
 
 // prepare restaurant object
-$restaurant = new Restaurant($db);
+$clientTrace = new ClientTrace($db);
 
 // get id of restaurant to be edited
 $data = json_decode(file_get_contents("php://input"));
 
 // set ID property of restaurant to be edited
-$restaurant->id = $data->id;
+$clientTrace->id = $data->id;
 
-// set restaurant property values
-$restaurant->name = $data->name;
-$restaurant->address = $data->address;
-$restaurant->password = $data->password;
+// set client trace property values
+$clientTrace->date = $data->date;
+$clientTrace->tableNumber = $data->tableNumber;
+$clientTrace->firstname = $data->firstname;
+$clientTrace->lastname = $data->lastname;
+$clientTrace->phone = $data->phone;
+$clientTrace->postalCode = $data->postalCode;
+$clientTrace->restaurantId = $data->restaurantId;
 
 // update the restaurant
-if ($restaurant->update()) {
+if ($clientTrace->update()) {
 
     // set response code - 200 ok
     http_response_code(200);
 
     // tell the user
-    echo json_encode(array("message" => "Restaurant was updated."));
+    echo json_encode(array("message" => "Client trace was updated."));
 } // if unable to update the restaurant, tell the user
 else {
 
@@ -43,6 +47,6 @@ else {
     http_response_code(503);
 
     // tell the user
-    echo json_encode(array("message" => "Unable to update restaurant."));
+    echo json_encode(array("message" => "Unable to update the client trace."));
 }
 ?>

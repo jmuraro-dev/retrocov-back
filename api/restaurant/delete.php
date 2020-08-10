@@ -14,16 +14,16 @@ include_once '../objects/restaurant.php';
 $database = new Database();
 $db = $database->getConnection();
 
-// prepare product object
+// prepare restaurant object
 $restaurant = new Restaurant($db);
 
-// get product id
+// get restaurant id
 $data = json_decode(file_get_contents("php://input"));
 
-// set product id to be deleted
+// set restaurant id to be deleted
 $restaurant->id = $data->id;
 
-// delete the product
+// delete the restaurant
 if ($restaurant->delete()) {
 
     // set response code - 200 ok
@@ -31,7 +31,7 @@ if ($restaurant->delete()) {
 
     // tell the user
     echo json_encode(array("message" => "Restaurant was deleted."));
-} // if unable to delete the product
+} // if unable to delete the restaurant
 else {
 
     // set response code - 503 service unavailable
