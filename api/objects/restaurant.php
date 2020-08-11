@@ -60,6 +60,36 @@ class Restaurant
         $this->password = $row['password'];
     }
 
+    // get a restaurant with his complete name
+    function readByName()
+    {
+
+        // query to read single record
+        $query = "SELECT * FROM " . $this->table_name . " r 
+            WHERE r.name = ? LIMIT 0,1";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // sanitize
+        $this->name = htmlspecialchars(strip_tags($this->name));
+
+        // bind id of restaurant to be updated
+        $stmt->bindParam(1, $this->name);
+
+        // execute query
+        $stmt->execute();
+
+        // get retrieved row
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // set values to object properties
+        $this->id = $row['id'];
+        $this->name = $row['name'];
+        $this->address = $row['address'];
+        $this->password = $row['password'];
+    }
+
     function nameExists() {
         $query = "SELECT id, name, password FROM " . $this->table_name . " WHERE name LIKE ? LIMIT 0,1";
 
