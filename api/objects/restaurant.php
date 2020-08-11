@@ -60,6 +60,32 @@ class Restaurant
         $this->password = $row['password'];
     }
 
+    function nameExists() {
+        $query = "SELECT id, name, password FROM " . $this->table_name . " WHERE name LIKE ? LIMIT 0,1";
+
+        $stmt = $this->conn->prepare($query);
+
+        $this->name = htmlspecialchars(strip_tags($this->name));
+
+        $stmt->bindParam(1, $this->name);
+
+        $stmt->execute();
+
+        $num = $stmt->rowCount();
+
+        if($num > 0) {
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $this->id = $row['id'];
+            $this->name = $row['name'];
+            $this->password = $row['password'];
+
+            return true;
+        }
+
+        return false;
+    }
+
     // create restaurant
     function create()
     {
