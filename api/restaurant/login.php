@@ -1,6 +1,9 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Headers: access");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Credentials: true");
+header('Content-Type: application/json');
 
 include_once '../config/database.php';
 
@@ -22,5 +25,6 @@ if ($restaurant_exists && $data->password == $restaurant->password) {
     echo json_encode(array("isLogged" => true, "message" => "Login réussi.", "id" => $restaurant->id));
 } else {
     http_response_code(401);
+
     echo json_encode(array("isLogged" => false, "message" => "Login non-réussi."));
 }
