@@ -18,16 +18,17 @@ $db = $database->getConnection();
 $restaurant = new Restaurant($db);
 
 // set ID property of record to read
-$restaurant->name = isset($_GET['name']) ? $_GET['name'] : die();
+$restaurant->urlName = isset($_GET['urlName']) ? $_GET['urlName'] : die();
 
 // read the details of restaurant to be edited
-$restaurant->readByName();
+$restaurant->readByUrlName();
 
-if($restaurant->name!=null){
+if($restaurant->urlName!=null){
     // create array
     $restaurant_arr = array(
         "id" =>  $restaurant->id,
         "name" => $restaurant->name,
+        "urlName" => $restaurant->urlName,
         "address" => $restaurant->address,
         "password" => $restaurant->password
     );

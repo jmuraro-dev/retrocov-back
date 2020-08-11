@@ -41,11 +41,11 @@ WHERE r.id = c.restaurantId";
         return $stmt;
     }
 
-    // used when filling up the update restaurant form
+    // used when filling up the update client trace form
     function readByRestaurantId()
     {
 
-        // query to read trace depending of the restaurant id
+        // query to read trace depending of the client trace id
         $query = "SELECT 
 c.id, c.date, c.tableNumber, c.firstname, c.lastname, c.phone,
 c.postalCode, c.restaurantId, r.name as restaurantName FROM `clienttrace` as c, `restaurant` as r 
@@ -73,7 +73,7 @@ WHERE r.id = c.restaurantId AND c.restaurantId = ?";
         // prepare query statement
         $stmt = $this->conn->prepare($query);
 
-        // bind id of restaurant to be updated
+        // bind id of client trace to be updated
         $stmt->bindParam(1, $this->id);
 
         // execute query
@@ -136,7 +136,7 @@ WHERE r.id = c.restaurantId AND c.restaurantId = ?";
 
     }
 
-    // update the restaurant
+    // update the client trace
     function update()
     {
 

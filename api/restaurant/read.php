@@ -28,6 +28,7 @@ if($restaurant->name!=null){
     $restaurant_arr = array(
         "id" =>  $restaurant->id,
         "name" => $restaurant->name,
+        "urlName" => $restaurant->urlName,
         "address" => $restaurant->address,
         "password" => $restaurant->password
     );
