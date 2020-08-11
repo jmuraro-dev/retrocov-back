@@ -9,6 +9,7 @@ class Restaurant
     // object properties
     public $id;
     public $name;
+    public $urlName;
     public $address;
     public $password;
 
@@ -56,12 +57,44 @@ class Restaurant
 
         // set values to object properties
         $this->name = $row['name'];
+        $this->urlName = $row['urlName'];
+        $this->address = $row['address'];
+        $this->password = $row['password'];
+    }
+
+    // get a restaurant with his complete name
+    function readByUrlName()
+    {
+
+        // query to read single record
+        $query = "SELECT * FROM " . $this->table_name . " r 
+            WHERE r.urlName = ? LIMIT 0,1";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // sanitize
+        $this->urlName = htmlspecialchars(strip_tags($this->urlName));
+
+        // bind id of restaurant to be updated
+        $stmt->bindParam(1, $this->urlName);
+
+        // execute query
+        $stmt->execute();
+
+        // get retrieved row
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // set values to object properties
+        $this->id = $row['id'];
+        $this->name = $row['name'];
+        $this->urlName = $row['urlName'];
         $this->address = $row['address'];
         $this->password = $row['password'];
     }
 
     function nameExists() {
-        $query = "SELECT id, name, password FROM " . $this->table_name . " WHERE name LIKE ? LIMIT 0,1";
+        $query = "SELECT * FROM " . $this->table_name . " WHERE name LIKE ? LIMIT 0,1";
 
         $stmt = $this->conn->prepare($query);
 
@@ -94,18 +127,20 @@ class Restaurant
         $query = "INSERT INTO
                 " . $this->table_name . "
             SET
-                name=:name, address=:address, password=:password";
+                name=:name, urlName=:urlName, address=:address, password=:password";
 
         // prepare query
         $stmt = $this->conn->prepare($query);
 
         // sanitize
         $this->name = htmlspecialchars(strip_tags($this->name));
+        $this->urlName = htmlspecialchars(strip_tags($this->urlName));
         $this->address = htmlspecialchars(strip_tags($this->address));
         $this->password = htmlspecialchars(strip_tags($this->password));
 
         // bind values
         $stmt->bindParam(":name", $this->name);
+        $stmt->bindParam(":urlName", $this->urlName);
         $stmt->bindParam(":address", $this->address);
         $stmt->bindParam(":password", $this->password);
 
@@ -126,6 +161,7 @@ class Restaurant
         $query = "UPDATE " . $this->table_name . " r
             SET
                 r.name = :name,
+                r.urlName = :urlName,
                 r.address = :address,
                 r.password = :password
             WHERE
@@ -136,12 +172,14 @@ class Restaurant
 
         // sanitize
         $this->name = htmlspecialchars(strip_tags($this->name));
+        $this->urlName = htmlspecialchars(strip_tags($this->urlName));
         $this->address = htmlspecialchars(strip_tags($this->address));
         $this->password = htmlspecialchars(strip_tags($this->password));
         $this->id = htmlspecialchars(strip_tags($this->id));
 
         // bind new values
         $stmt->bindParam(':name', $this->name);
+        $stmt->bindParam(':urlName', $this->urlName);
         $stmt->bindParam(':address', $this->address);
         $stmt->bindParam(':password', $this->password);
         $stmt->bindParam(':id', $this->id);

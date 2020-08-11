@@ -32,6 +32,7 @@ if ($num > 0) {
         $restaurant_item = array(
             "id" => $id,
             "name" => $name,
+            "urlName" => $urlName,
             "address" => $address,
             "password" => $password
         );

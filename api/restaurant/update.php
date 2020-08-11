@@ -25,6 +25,7 @@ $restaurant->id = $data->id;
 
 // set restaurant property values
 $restaurant->name = $data->name;
+$restaurant->urlName = $data->urlName;
 $restaurant->address = $data->address;
 $restaurant->password = $data->password;
 
