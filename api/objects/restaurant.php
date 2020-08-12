@@ -112,6 +112,7 @@ class Restaurant
             $this->id = $row['id'];
             $this->name = $row['name'];
             $this->password = $row['password'];
+            $this->urlName = $row['urlName'];
 
             return true;
         }

@@ -22,7 +22,7 @@ $restaurant_exists = $restaurant->nameExists();
 if ($restaurant_exists && $data->password == $restaurant->password) {
     http_response_code(200);
 
-    echo json_encode(array("isLogged" => true, "message" => "Login réussi.", "id" => $restaurant->id));
+    echo json_encode(array("isLogged" => true, "message" => "Login réussi.", "urlName" => $restaurant->urlName));
 } else {
     http_response_code(401);
 
