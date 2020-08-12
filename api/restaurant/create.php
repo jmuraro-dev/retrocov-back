@@ -42,7 +42,7 @@ if (
         http_response_code(201);
 
         // tell the user
-        echo json_encode(array("message" => "Restaurant was created."));
+        echo json_encode(array("message" => "Restaurant was created.", "urlName" => $restaurant->urlName));
     } // if unable to create the restaurant, tell the user
     else {
 
