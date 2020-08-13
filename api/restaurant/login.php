@@ -18,6 +18,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 $restaurant->name = $data->name;
 $restaurant_exists = $restaurant->nameExists();
+$data->password = htmlspecialchars(strip_tags($data->password));
 
 if ($restaurant_exists && $data->password == $restaurant->password) {
     http_response_code(200);
