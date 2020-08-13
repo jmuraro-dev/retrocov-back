@@ -34,7 +34,6 @@ if ($num > 0) {
             "name" => $name,
             "urlName" => $urlName,
             "address" => $address,
-            "password" => $password
         );
         array_push($restaurants_arr["records"], $restaurant_item);
     }

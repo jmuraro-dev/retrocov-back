@@ -21,8 +21,7 @@ $restaurant_exists = $restaurant->nameExists();
 
 if ($restaurant_exists && $data->password == $restaurant->password) {
     http_response_code(200);
-
-    echo json_encode(array("isLogged" => true, "message" => "Login réussi.", "urlName" => $restaurant->urlName));
+    echo json_encode(array("isLogged" => true, "message" => "Login réussi.", "urlName" => $restaurant->urlName, "isAdmin" => $restaurant->admin));
 } else {
     http_response_code(401);
 

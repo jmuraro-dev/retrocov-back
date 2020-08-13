@@ -30,7 +30,7 @@ if($restaurant->urlName!=null){
         "name" => $restaurant->name,
         "urlName" => $restaurant->urlName,
         "address" => $restaurant->address,
-        "password" => $restaurant->password
+        "admin" => $restaurant->admin
     );
 
     // set response code - 200 OK

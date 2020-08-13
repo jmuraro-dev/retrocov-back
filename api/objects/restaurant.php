@@ -12,6 +12,7 @@ class Restaurant
     public $urlName;
     public $address;
     public $password;
+    public $admin;
 
     // constructor with $db as database connection
     public function __construct($db)
@@ -23,7 +24,7 @@ class Restaurant
     function readAll()
     {
         // select all query
-        $query = "SELECT * FROM " . $this->table_name;
+        $query = "SELECT * FROM " . $this->table_name . " WHERE admin LIKE 0";
         //$query = "SELECT * FROM restaurant";
 
         // prepare query statement
@@ -90,7 +91,7 @@ class Restaurant
         $this->name = $row['name'];
         $this->urlName = $row['urlName'];
         $this->address = $row['address'];
-        $this->password = $row['password'];
+        $this->admin = $row['admin'];
     }
 
     function nameExists() {
@@ -113,6 +114,7 @@ class Restaurant
             $this->name = $row['name'];
             $this->password = $row['password'];
             $this->urlName = $row['urlName'];
+            $this->admin = $row['admin'];
 
             return true;
         }
