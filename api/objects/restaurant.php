@@ -148,7 +148,7 @@ class Restaurant
 
         // bind values
         $stmt->bindParam(":name", $this->name);
-        $stmt->bindParam(":emaik", $this->email);
+        $stmt->bindParam(":email", $this->email);
         $stmt->bindParam(":urlName", $this->urlName);
         $stmt->bindParam(":address", $this->address);
         $stmt->bindParam(":password", $this->password);
