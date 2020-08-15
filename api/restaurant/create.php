@@ -24,6 +24,7 @@ $data = json_decode(file_get_contents("php://input"));
 // make sure data is not empty
 if (
     !empty($data->name) &&
+    !empty($data->email) &&
     !empty($data->urlName) &&
     !empty($data->address) &&
     !empty($data->password)
@@ -31,6 +32,7 @@ if (
 
     // set restaurant property values
     $restaurant->name = $data->name;
+    $restaurant->email = $data->email;
     $restaurant->urlName = $data->urlName;
     $restaurant->address = $data->address;
     $restaurant->password = $data->password;

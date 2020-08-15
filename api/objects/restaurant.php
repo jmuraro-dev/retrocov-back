@@ -9,6 +9,7 @@ class Restaurant
     // object properties
     public $id;
     public $name;
+    public $email;
     public $urlName;
     public $address;
     public $password;
@@ -58,6 +59,7 @@ class Restaurant
 
         // set values to object properties
         $this->name = $row['name'];
+        $this->email = $row['email'];
         $this->urlName = $row['urlName'];
         $this->address = $row['address'];
         $this->password = $row['password'];
@@ -89,6 +91,7 @@ class Restaurant
         // set values to object properties
         $this->id = $row['id'];
         $this->name = $row['name'];
+        $this->email = $row['email'];
         $this->urlName = $row['urlName'];
         $this->address = $row['address'];
         $this->admin = $row['admin'];
@@ -112,6 +115,7 @@ class Restaurant
 
             $this->id = $row['id'];
             $this->name = $row['name'];
+            $this->email = $row['email'];
             $this->password = $row['password'];
             $this->urlName = $row['urlName'];
             $this->admin = $row['admin'];
@@ -130,19 +134,21 @@ class Restaurant
         $query = "INSERT INTO
                 " . $this->table_name . "
             SET
-                name=:name, urlName=:urlName, address=:address, password=:password";
+                name=:name, email=:email, urlName=:urlName, address=:address, password=:password";
 
         // prepare query
         $stmt = $this->conn->prepare($query);
 
         // sanitize
         $this->name = htmlspecialchars(strip_tags($this->name));
+        $this->email = htmlspecialchars(strip_tags($this->email));
         $this->urlName = htmlspecialchars(strip_tags($this->urlName));
         $this->address = htmlspecialchars(strip_tags($this->address));
         $this->password = htmlspecialchars(strip_tags($this->password));
 
         // bind values
         $stmt->bindParam(":name", $this->name);
+        $stmt->bindParam(":emaik", $this->email);
         $stmt->bindParam(":urlName", $this->urlName);
         $stmt->bindParam(":address", $this->address);
         $stmt->bindParam(":password", $this->password);
@@ -164,6 +170,7 @@ class Restaurant
         $query = "UPDATE " . $this->table_name . " r
             SET
                 r.name = :name,
+                r.email = :email,
                 r.urlName = :urlName,
                 r.address = :address,
                 r.password = :password
@@ -175,6 +182,7 @@ class Restaurant
 
         // sanitize
         $this->name = htmlspecialchars(strip_tags($this->name));
+        $this->email = htmlspecialchars(strip_tags($this->email));
         $this->urlName = htmlspecialchars(strip_tags($this->urlName));
         $this->address = htmlspecialchars(strip_tags($this->address));
         $this->password = htmlspecialchars(strip_tags($this->password));
@@ -182,6 +190,7 @@ class Restaurant
 
         // bind new values
         $stmt->bindParam(':name', $this->name);
+        $stmt->bindParam(':email', $this->email);
         $stmt->bindParam(':urlName', $this->urlName);
         $stmt->bindParam(':address', $this->address);
         $stmt->bindParam(':password', $this->password);
