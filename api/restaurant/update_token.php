@@ -23,7 +23,7 @@ $data = json_decode(file_get_contents("php://input"));
 // set ID property of restaurant to be edited
 $restaurant->id = $data->id;
 try {
-    $restaurant->token = random_bytes(5);
+    $restaurant->token = bin2hex(random_bytes(20));
 } catch (Exception $e) {
     http_response_code(503);
     echo json_encode(array("message" => "Unable to generate the random code token."));
