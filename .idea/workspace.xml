@@ -11,9 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="433a83ce-4532-48b0-abb4-210535036dd4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/restaurant/update_password.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/restaurant/update_token.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/update_token.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/objects/restaurant.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/objects/restaurant.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,7 @@
       <workItem from="1596893050524" duration="10991000" />
       <workItem from="1597066770715" duration="7405000" />
       <workItem from="1597150213767" duration="680000" />
-      <workItem from="1597589046471" duration="6865000" />
+      <workItem from="1597589046471" duration="8138000" />
     </task>
     <task id="LOCAL-00001" summary="+ token field added in restaurant&#10;+ read restaurant by email&#10;+ token generator">
       <created>1597592455313</created>
