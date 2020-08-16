@@ -10,15 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="433a83ce-4532-48b0-abb4-210535036dd4" name="Default Changelist" comment="">
+    <list default="true" id="433a83ce-4532-48b0-abb4-210535036dd4" name="Default Changelist" comment="+ token field added in restaurant&#10;+ read restaurant by email&#10;+ token generator">
+      <change afterPath="$PROJECT_DIR$/api/restaurant/read_by_email.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/restaurant/update_token.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/objects/client_trace.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/objects/client_trace.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/objects/restaurant.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/objects/restaurant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/restaurant/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/restaurant/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/read.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/restaurant/read_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/read_all.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/restaurant/read_by_name.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/read_by_url_name.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/restaurant/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,13 +27,12 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="valerian.haury &lt;valerian.haury@etu.hesge.ch&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="453" />
-    <option name="y" value="-18" />
-    <option name="width" value="981" />
-    <option name="height" value="1032" />
   </component>
   <component name="ProjectId" id="1fjJ3dmXBVaz3pGg10z5SfrVusq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -46,21 +43,23 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/api/restaurant" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\haury\Desktop\Pro\tracage-back\api" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Haury\Desktop\Pro\Retrocov\retrocov-back\api\restaurant" />
       <recent name="C:\Users\haury\Desktop\Pro\tracage-back\api\restaurant" />
       <recent name="C:\Users\haury\Desktop\Pro\tracage-back\api\client_trace" />
       <recent name="C:\Users\haury\Desktop\Pro\tracage-back\api\objects" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\haury\Desktop\Pro\tracage-back\api" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -81,6 +80,7 @@
       <workItem from="1596893050524" duration="10991000" />
       <workItem from="1597066770715" duration="7405000" />
       <workItem from="1597150213767" duration="680000" />
+      <workItem from="1597589046471" duration="3350000" />
     </task>
     <servers />
   </component>
@@ -113,23 +113,33 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="+ token field added in restaurant&#10;+ read restaurant by email&#10;+ token generator" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ token field added in restaurant&#10;+ read restaurant by email&#10;+ token generator" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="191" y="49" width="1089" height="631" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596970523288">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="191" y="49" width="1089" height="631" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1596970523288" />
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1597592379631">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.-94.1920.1040@0.0.1920.1040" timestamp="1597592379631" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1596814162939">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1596814162939" />
-    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1596818856009">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="716" y="404" key="NewPhpFileDialog" timestamp="1597589836091">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1596818856009" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1597153200876">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="716" y="404" key="NewPhpFileDialog/0.0.1920.1040/-1920.-94.1920.1040@0.0.1920.1040" timestamp="1597589836091" />
+    <state x="213" y="0" key="SettingsEditor" timestamp="1597589064006">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1597153200876" />
+    <state x="213" y="0" key="SettingsEditor/0.0.1920.1040/-1920.-94.1920.1040@0.0.1920.1040" timestamp="1597589064006" />
     <state x="297" y="-6" width="672" height="676" key="search.everywhere.popup" timestamp="1597068181210">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

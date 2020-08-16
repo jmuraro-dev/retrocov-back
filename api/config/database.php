@@ -9,20 +9,18 @@ class Database
 {
 
     // database credentials
-
     private $host = "aw2g3.myd.infomaniak.com";
     private $db_name = "aw2g3_retrocov";
     private $username = "aw2g3_valerian";
     private $password = "vale19965218";
     /*
-     * Local
+     // Local
     private $host = "localhost";
-    private $db_name = "tracage";
+    private $db_name = "aw2g3_retrocov";
     private $username = "root";
     private $password = "";
     public $conn;
-    */
-
+*/
     // get the database connection
     public function getConnection()
     {
