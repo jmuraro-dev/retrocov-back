@@ -10,13 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="433a83ce-4532-48b0-abb4-210535036dd4" name="Default Changelist" comment="+ token field added in restaurant&#10;+ read restaurant by email&#10;+ token generator">
-      <change afterPath="$PROJECT_DIR$/api/restaurant/read_by_email.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/restaurant/update_token.php" afterDir="false" />
+    <list default="true" id="433a83ce-4532-48b0-abb4-210535036dd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/objects/restaurant.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/objects/restaurant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/restaurant/update_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/restaurant/update_password.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,8 +76,16 @@
       <workItem from="1596893050524" duration="10991000" />
       <workItem from="1597066770715" duration="7405000" />
       <workItem from="1597150213767" duration="680000" />
-      <workItem from="1597589046471" duration="3350000" />
+      <workItem from="1597589046471" duration="8389000" />
     </task>
+    <task id="LOCAL-00001" summary="+ token field added in restaurant&#10;+ read restaurant by email&#10;+ token generator">
+      <created>1597592455313</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597592455313</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,10 +126,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="191" y="49" width="1089" height="631" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1596970523288" />
-    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1597592379631">
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1597592454472">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.-94.1920.1040@0.0.1920.1040" timestamp="1597592379631" />
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.-94.1920.1040@0.0.1920.1040" timestamp="1597592454472" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1596814162939">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -140,6 +144,10 @@
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1597153200876" />
     <state x="213" y="0" key="SettingsEditor/0.0.1920.1040/-1920.-94.1920.1040@0.0.1920.1040" timestamp="1597589064006" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1597592481232">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.-94.1920.1040@0.0.1920.1040" timestamp="1597592481232" />
     <state x="297" y="-6" width="672" height="676" key="search.everywhere.popup" timestamp="1597068181210">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

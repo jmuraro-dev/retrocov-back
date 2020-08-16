@@ -262,7 +262,7 @@ class Restaurant
         return false;
     }
 
-    // update the restaurant
+    // update the restaurant token
     function updateToken()
     {
         // update query
@@ -282,6 +282,37 @@ class Restaurant
         // bind new values
         $stmt->bindParam(':token', $this->token);
         $stmt->bindParam(':id', $this->id);
+
+        // execute the query
+        if ($stmt->execute()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    // update the restaurant password
+    function updatePassword()
+    {
+        // update query
+        $query = "UPDATE " . $this->table_name . " r
+            SET
+                r.password = :password
+            WHERE
+                r.id = :id AND r.token = :token";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // sanitize
+        $this->token = htmlspecialchars(strip_tags($this->token));
+        $this->id = htmlspecialchars(strip_tags($this->id));
+        $this->password = htmlspecialchars(strip_tags($this->password));
+
+        // bind new values
+        $stmt->bindParam(':token', $this->token);
+        $stmt->bindParam(':id', $this->id);
+        $stmt->bindParam(':password', $this->password);
 
         // execute the query
         if ($stmt->execute()) {
