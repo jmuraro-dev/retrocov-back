@@ -22,7 +22,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 // set ID property of restaurant to be edited
 $restaurant->id = $data->id;
-$restaurant->token = sha1(strval($data->id) + sha1(date('Y-m-d H:i:s')));
+$restaurant->token = md5(microtime().rand() + $restaurant->id);
 
 
 // update the restaurant
